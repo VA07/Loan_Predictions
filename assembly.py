@@ -26,8 +26,8 @@ HEADERS = {
         "zip",
         "insurance_percentage",
         "product_type",
-        "co_borrower_credit_score"
-        "mortage_insurnce_type"
+        "co_borrower_credit_score",
+        "mortage_insurance_type",
         "relocation_indicator"
     ],
     "Performance": [
@@ -58,9 +58,9 @@ HEADERS = {
         "repurchase_proceeds",
         "other_foreclosure_proceeds",
         "non_interest_bearing_balance",
-        "principal_forgiveness_balance"
-        "repurchase_whole_flag"
-        "foreclosure_principal_write_off"
+        "principal_forgiveness_balance",
+        "repurchase_whole_flag",
+        "foreclosure_principal_write_off",
         "servicing_activity_indicator"
     ]
 }
