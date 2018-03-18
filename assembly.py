@@ -2,6 +2,7 @@ import os
 import settings
 import pandas as pd
 
+#dictionary that holds column names
 HEADERS = {
     "Acquisition": [
         "id",
@@ -68,8 +69,8 @@ HEADERS = {
 SELECT = {
     "Acquisition": HEADERS["Acquisition"],
     "Performance": [
-        "id",
-        "foreclosure_date"
+	  "id",
+      "foreclosure_date"
     ]
 }
 
@@ -82,7 +83,7 @@ def concatenate(prefix="Acquisition"):
         #ignore files other than the prefix
         if not f.startswith(prefix):
            continue
-        data = pd.read_csv(os.path.join(settings.DATA_DIR, f), sep="|", header=None, names=HEADERS[prefix], index_col=False)
+        data = pd.read_csv(os.path.join(settings.DATA_DIR, f), sep="|", header=None, names=HEADERS[prefix], index_col=None)
         data = data[SELECT[prefix]]
         full.append(data)
 
